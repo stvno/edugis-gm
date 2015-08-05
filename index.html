@@ -7,11 +7,70 @@
 <script src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
 <link rel="import" href="./elements/gm-leaflet-map.html">
 <style>
+
+#topbar, #footbar {
+height: 50px;
+width: 100%;
+}
+#footbar {
+    display: none;
+    }
+#middle {
+   top: 50px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    display: flex;
+    position: absolute;
+}
+#sidebar {
+    display: none;
+}
 gm-leaflet-map {
+  flex: auto
+   
+}
+@media all and (min-width: 600px) {
+    /* medium screen */
+    #middle {
+   
+    bottom: 50px;
+    }
+    #footbar {
+    bottom: 0px;
+    position: absolute;
+    }
+    #sidebar {
+        display: inline-flex;
+        flex: row;
+        width: 6%;
+
+    }
+}
+@media all and (min-width: 800px) {
+    /* large screen */
+     #sidebar {
+        
+        width: 55px;
+        transition: .1s;
+    }
+    #sidebar:hover {
+        width: 15%;
+        max-width: 250px;
+        transition: .2s;
+    }
 }
 </style>
 </head>
 <body>
-<gm-leaflet-map></gm-leaflet-map>
+<div id="topbar">edugis</div>
+<div id="middle">
+    <div id="sidebar">bar</div>
+    <gm-leaflet-map></gm-leaflet-map>
+  
+</div>
+<div id="footbar">
+footer
+</div>
 </body>
 </html>
