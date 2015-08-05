@@ -1,0 +1,11 @@
+html, body {
+margin:0px;
+padding:0px;
+overflow:hidden;
+}
+html {
+font-size: 62.5%;
+}
+body {
+font-size: 14px;font-size: 1.4rem;
+}

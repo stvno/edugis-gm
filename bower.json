@@ -23,6 +23,7 @@
     "tests"
   ],
   "dependencies": {
-    "leaflet": "~0.7.3"
+    "leaflet": "~0.7.3",
+    "polymer": "~1.0.8"
   }
 }
